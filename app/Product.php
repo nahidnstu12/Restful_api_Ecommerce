@@ -17,12 +17,15 @@ class Product extends Model
     public function isAvailable(){
         return $this->status == Product::AVAILABLE_PRODUCT;
     }
+    // single seller returns
     public function seller(){
         return $this->belongsTo(Seller::class);
     }
+    // multiple transaction returns
     public function transactions(){
         return $this->hasMany(Transaction::class);
     }
+    // multipe categories
     public function categories(){
         return $this->belongsToMany(Category::class);
     }
