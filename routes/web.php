@@ -15,16 +15,3 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// All resources route
-
-// Route::resource('buyers','buyerController',['only'=> ['index','show']]);
-
-// Route::resource('sellers','sellerController',['except'=> ['create','edit']]);
-
-// Route::resource('users','userController',['except'=> ['create','edit']]);
-
-// Route::resource('categories','CategoryController',['only'=> ['index','show']]);
-
-// Route::resource('products','ProductController',['only'=> ['index','show']]);
-
-// Route::resource('transactions','TransactionController',['only'=> ['index','show']]);
