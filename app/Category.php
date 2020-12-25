@@ -12,6 +12,7 @@ class Category extends Model
     
     protected $dates = ['deleted_at'];
     protected $fillable = ['name','description'];
+    protected $hidden = ['pivot'];
 
     // many categories have many products.
     public function products(){

@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Product;
 
 use App\Product;
-use Illuminate\Http\Request;
 use App\Http\Controllers\ApiController;
 
 class ProductController extends ApiController
@@ -11,10 +10,10 @@ class ProductController extends ApiController
     public function index()
     {
         $products = Product::all();
-        return \response()->json(['data'=>$products],200);
+        return $this->showAll($products);
     }
 
-    public function show($id){
-        
+    public function show(Product $product){
+        return $this->showOne($product);
     }
 }
