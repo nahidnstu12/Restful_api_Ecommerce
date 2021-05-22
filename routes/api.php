@@ -67,4 +67,4 @@ Route::resource('transactions.sellers', 'Transaction\TransactionSellerController
 /**
  * Users
  */
-Route::resource('users', 'UserController', ['except' => ['create', 'edit']]);
+Route::resource('users', 'UserController', ['except' => ['create', 'edit']])->middleware('cors');
